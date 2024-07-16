@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StackTests {
 
@@ -50,8 +49,16 @@ public class StackTests {
         assertEquals(6, myStack.getSize());
         assertEquals(6, myStack.getPeek());
         assertEquals(List.of(6, 5, 4, 3, 2, 1), myStack.getCurrentStack());
+
     }
 
-    // getStackElements
+    @Test
+    void testGetAllStackElements() {
+        assertTrue(myStack.getCurrentStack().isEmpty());
+        myStack.push(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        myStack.pop();
+        myStack.pop();
+        assertEquals(List.of(8, 7, 6, 5, 4, 3, 2, 1), myStack.getCurrentStack());
+    }
 
 }
