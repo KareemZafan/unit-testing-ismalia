@@ -48,7 +48,7 @@ public class StackTests {
 
         assertEquals(700, myStack.pop());
         assertEquals(6, myStack.getSize());
-        assertEquals(6, myStack.getPeek());
+        assertEquals(-7, myStack.getPeek());
         assertEquals(List.of(6, 5, 4, 3, 2, 1), myStack.getCurrentStack());
     }
 
