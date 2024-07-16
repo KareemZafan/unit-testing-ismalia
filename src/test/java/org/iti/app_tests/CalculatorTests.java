@@ -90,6 +90,9 @@ public class CalculatorTests {
         assertEquals(14, calculator.mod(30, 16));
         assertEquals(1, calculator.mod(1, 100));
 
+        Exception ex = assertThrowsExactly(ArithmeticException.class, () -> calculator.mod(7, 0));
+
+        assertEquals("Illegal Operation", ex.getMessage());
     }
 
     @Test

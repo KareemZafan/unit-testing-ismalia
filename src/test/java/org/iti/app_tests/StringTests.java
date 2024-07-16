@@ -20,14 +20,14 @@ public class StringTests {
 
     private static Stream<Arguments> provideData() {
 
-       return Stream.of(
-                Arguments.of("radar",true),
-                Arguments.of("mum",true),
-                Arguments.of("level",true),
-                Arguments.of("racecar",true),
-                Arguments.of(" ",true),
-                Arguments.of("test",false),
-                Arguments.of("12345",false)
+        return Stream.of(
+                Arguments.of("radar", true),
+                Arguments.of("mum", true),
+                Arguments.of("level", true),
+                Arguments.of("racecar", true),
+                Arguments.of(" ", true),
+                Arguments.of("test", false),
+                Arguments.of("12345", false)
         );
     }
 
@@ -37,7 +37,7 @@ public class StringTests {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"radar", "level", "mum", "itu", "noon"})
+    @ValueSource(strings = {"radar", "level", "mum", "iti", "noon"})
     void testIsStringPalindrome(String input) {
         /*assertTrue(stringManipulation.isPalindrome("mum"));
         assertTrue(stringManipulation.isPalindrome("level"));
